@@ -16,7 +16,7 @@ export function Home() {
           </p>
         </div>
         <div className="get-started">
-          <h3>The best way to find your favorite animes</h3>
+          <h3>The best way to find out what's new in animes world</h3>
           <Link to="/animes">Get started</Link>
         </div>
       </Container>

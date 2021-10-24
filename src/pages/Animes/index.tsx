@@ -4,7 +4,7 @@ import { ExternalLink } from "react-external-link";
 import { Link } from "react-router-dom";
 import { Navbar } from "../../components/Navbar";
 import api from "../../services/api";
-import { Container, Title } from "./styles";
+import { Container, Filter, Title } from "./styles";
 
 type AnimeList = {
   mal_id: number,
@@ -17,7 +17,7 @@ type AnimeList = {
 
 export function Animes() {
   const [ animeList, setAnimeList ] = useState<AnimeList[]>([]);
-
+  const [ searchTerm, setSearchTerm ] = useState('')
   useEffect(() => {
     api.get("/v3/top/anime/1/upcoming")
     .then((response: AxiosResponse<any>) => {
@@ -28,9 +28,20 @@ export function Animes() {
   return (
     <div>
       <Navbar></Navbar>
-      <Title className="title">Upcoming animes</Title>
+      <Filter>
+        <Title className="title">Upcoming animes</Title>
+        <input placeholder="Search..." type="text" onChange={event => setSearchTerm(event.target.value)}/>
+      </Filter>
       <Container>
-        {animeList.map((content) => {
+        {animeList.filter((value) => {
+          if(searchTerm === ''){
+            return value
+          }else if(value.title.toLowerCase().includes(searchTerm.toLowerCase())){
+            return value
+          }else{
+            return false
+          }
+        }).map((content) => {
           return(
             <div className="card" key={content.mal_id}>
               <img src={content.image_url} alt={content.title} />

@@ -56,7 +56,21 @@ export const Container = styled.section`
     }
   }
 `;
+export const Filter = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  input{
+    margin-top: 20px;
+    width: 300px;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 10px;
+    border-radius: 4px;
+  }
+`
 export const Title = styled.h1`
   color: var(--shape);
   text-align: center;
