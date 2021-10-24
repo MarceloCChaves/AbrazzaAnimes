@@ -45,7 +45,7 @@ export const Container = styled.section`
           transition: all 0.4s ease;
 
           :hover{
-            filter: brightness(90%);
+            filter: brightness(85%);
           }
         }
         .view {
