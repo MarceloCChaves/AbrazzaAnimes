@@ -1,17 +1,18 @@
 import { AxiosResponse } from "axios";
 import { useEffect, useState } from "react";
+import { ExternalLink } from "react-external-link";
+import { Link } from "react-router-dom";
 import { Navbar } from "../../components/Navbar";
 import api from "../../services/api";
-import { Container } from "./styles";
+import { Container, Title } from "./styles";
 
 type AnimeList = {
-  rank: number,
+  mal_id: number,
   title: string,
   url: string,
   image_url: string,
   type: string,
   start_date: string,
-  end_date: string,
 }
 
 export function Animes() {
@@ -27,22 +28,21 @@ export function Animes() {
   return (
     <div>
       <Navbar></Navbar>
-      <h1>Featured animes</h1>
+      <Title className="title">Upcoming animes</Title>
       <Container>
         {animeList.map((content) => {
           return(
-            <div className="card" key={content.rank}>
+            <div className="card" key={content.mal_id}>
               <img src={content.image_url} alt={content.title} />
               <div className="content">
                 <h3>{content.title}</h3>
                 <div className="info">
                   <p>Type: {content.type}</p>
-                  <span>{content.start_date ? "Released in: " + content.start_date : "Released in: ???"}</span>
-                  <p>{content.end_date ? "End in: " + content.end_date : "End in: ???"}</p>
+                  <span>{content.start_date ? "Release in: " + content.start_date : "Release in: ???"}</span>
                 </div>
                 <div className="buttons">
-                  <button className="view">View</button>
-                  <button className="info">More info</button>
+                  <Link to={`/news/${content.mal_id}`} className="view">News</Link>
+                  <ExternalLink href={`https://myanimelist.net/anime/${content.mal_id}/Tate_no_Yuusha_no_Nariagari_Season_2`} className="info" target="_blank">More info</ExternalLink>
                 </div>
               </div>
             </div>

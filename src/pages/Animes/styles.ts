@@ -32,16 +32,17 @@ export const Container = styled.section`
       }
       .buttons {
         background: var(--blue);
-        padding: 22px;
+        padding: 25px;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
 
-        button {
-          padding: 10px 25px;
+        a {
+          padding: 10px 15px;
           margin: 10px 5px 0;
           color: var(--shape);
           border: 0;
           border-radius: 4px;
+          text-decoration: none;
           transition: all 0.4s ease;
 
           :hover{
@@ -55,3 +56,9 @@ export const Container = styled.section`
     }
   }
 `;
+
+export const Title = styled.h1`
+  color: var(--shape);
+  text-align: center;
+  font-weight: 600;
+`
