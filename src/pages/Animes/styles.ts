@@ -6,28 +6,51 @@ export const Container = styled.section`
   justify-content: center;
   flex-wrap: wrap;
 
-  .card{
+  .card {
     margin: 20px;
     width: 260px;
-    img{
+    img {
       width: 260px;
       height: 306px;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
     }
-    .content{
-      background: var(--green);
-      height: 250px;
+    .content {
+      background: var(--shape);
       width: 100%;
-      border-bottom-left-radius: 8px;
-      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
       margin-top: -6px;
       text-align: center;
 
-      h3{
+      .info {
+        background: var(--green);
+      }
+      h3 {
         margin-bottom: 10px;
-        color: var(--shape);
-        text-shadow: 2px, 2px, #ff0000;
+        color: var(--text);
+      }
+      .buttons {
+        background: var(--blue);
+        padding: 22px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+
+        button {
+          padding: 10px 25px;
+          margin: 10px 5px 0;
+          color: var(--shape);
+          border: 0;
+          border-radius: 4px;
+          transition: all 0.4s ease;
+
+          :hover{
+            filter: brightness(90%);
+          }
+        }
+        .view {
+          background: var(--red);
+        }
       }
     }
   }

@@ -37,11 +37,13 @@ export function Animes() {
                 <h3>{content.title}</h3>
                 <div className="info">
                   <p>Type: {content.type}</p>
-                  <span>{content.start_date ? "Released in: " + content.start_date : ""}</span>
-                  <p>{content.end_date ? "End in: " + content.end_date : ""}</p>
+                  <span>{content.start_date ? "Released in: " + content.start_date : "Released in: ???"}</span>
+                  <p>{content.end_date ? "End in: " + content.end_date : "End in: ???"}</p>
                 </div>
-                <button>View</button>
-                <button>More info</button>
+                <div className="buttons">
+                  <button className="view">View</button>
+                  <button className="info">More info</button>
+                </div>
               </div>
             </div>
           )
