@@ -1,5 +1,6 @@
 import { Nav } from "./styles";
 import { Link } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
 
 export function Navbar() {
   return (
@@ -10,9 +11,9 @@ export function Navbar() {
         <li><Link to="/Help">Help</Link></li>
       </ul>
       <div className="links">
-        <Link to="/"><i className="fab fa-facebook-square"></i></Link>
-        <Link to="/"><i className="fab fa-instagram"></i></Link>
-        <Link to="/"><i className="fab fa-discord"></i></Link>
+        <ExternalLink href={"https://www.facebook.com/"}><i className="fab fa-facebook-square"></i></ExternalLink>
+        <ExternalLink href={"https://www.instagram.com/"}><i className="fab fa-instagram"></i></ExternalLink>
+        <ExternalLink href={"https://discord.com/"}><i className="fab fa-discord"></i></ExternalLink>
       </div>
     </Nav>
   );

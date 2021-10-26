@@ -46,4 +46,12 @@ export const Nav = styled.nav`
       }
     }
   }
+  @media (max-width: 767px){
+    .logo-items{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
 `;
