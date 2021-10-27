@@ -1,6 +1,5 @@
 import { FormEvent, useState } from "react";
 import { Navbar } from "../../components/Navbar";
-import { useHistory } from 'react-router-dom'
 import { Container } from "./styles";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -8,7 +7,6 @@ import 'react-toastify/dist/ReactToastify.css';
 export function Help() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("")
-  let history = useHistory()
 
   function handleReset(){
     setTitle("")
@@ -16,8 +14,7 @@ export function Help() {
   }
   function handleRequestForm(event: FormEvent) {
     event.preventDefault();
-    toast.success("Thanks for your suggestion, we are redirecting you to home")
-    history.push("/")
+    toast.success("Thank you for your attention, so we can make AbrazzaAnimes even better")
   }
   return (
     <div>
