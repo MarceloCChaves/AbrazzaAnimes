@@ -11,7 +11,7 @@ export function Home() {
         <div className="thumb">
           <img src={thumb} alt="Thumb" />
           <p>
-            Copyright &copy; Developed by{" "}
+            Copyright &copy; Developed by
             <a href="https://github.com/MarceloCChaves">Marcelo Chaves</a>
           </p>
         </div>

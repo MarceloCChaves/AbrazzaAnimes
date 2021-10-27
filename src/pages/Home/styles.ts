@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .thumb {
     padding: 20px 25px;
@@ -54,9 +55,28 @@ export const Container = styled.div`
       }
     }
   }
-  @media (max-width: 1023px) {
-    .thumb {
-      display: none;
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .thumb{
+      padding: 0;
+
+      img{
+        width: 100%;
+        max-width: 100%;
+      }
+
+      p{
+        margin-bottom: 20px;
+      }
+    }
+    .get-started{
+      a{
+        margin-bottom: 20px;
+      }
     }
   }
 `;
