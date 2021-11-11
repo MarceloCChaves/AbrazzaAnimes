@@ -8,7 +8,7 @@ export const Container = styled.div`
 
   .info {
     padding: 30px 100px;
-    background: var(--shape);
+    background: var(--box);
     width: 80%;
     max-width: 100%;
     border-radius: 24px;
@@ -16,12 +16,12 @@ export const Container = styled.div`
 
     strong {
       font-size: 32px;
-      color: var(--text);
+      color: var(--shape);
     }
 
     p {
       margin-top: 20px;
-      color: var(--text);
+      color: var(--shape);
     }
     .buttons {
       margin-top: 20px;

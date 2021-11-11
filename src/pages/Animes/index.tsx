@@ -44,12 +44,13 @@ export function Animes() {
         }).map((content) => {
           return(
             <div className="card" key={content.mal_id}>
-              <img src={content.image_url} alt={content.title} />
+              <img src={content.image_url} alt={content.title} loading="lazy" />
               <div className="content">
                 <h3>{content.title}</h3>
                 <div className="info">
                   <p>Type: {content.type}</p>
-                  <span>{content.start_date ? "Release in: " + content.start_date : "Release in: ???"}</span>
+                  <p>{content.start_date ? "Release in: " + content.start_date : "Release in: ???"}</p>
+                  <hr />
                 </div>
                 <div className="buttons">
                   <Link to={`/news/${content.mal_id}`} className="view">News</Link>

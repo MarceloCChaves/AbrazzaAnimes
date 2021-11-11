@@ -2,6 +2,7 @@ import { Navbar } from "../../components/Navbar";
 import thumb from "../../assets/thumb.png";
 import { Container } from "./styles";
 import { Link } from "react-router-dom";
+import { ExternalLink } from "react-external-link";
 
 export function Home() {
   return (
@@ -9,10 +10,10 @@ export function Home() {
       <Navbar />
       <Container>
         <div className="thumb">
-          <img src={thumb} alt="Thumb" />
+          <img src={thumb} alt="Thumb" loading="lazy"/>
           <p>
             Copyright &copy; Developed by
-            <a href="https://github.com/MarceloCChaves">Marcelo Chaves</a>
+            <ExternalLink href="https://github.com/MarceloCChaves">Marcelo Chaves</ExternalLink>
           </p>
         </div>
         <div className="get-started">

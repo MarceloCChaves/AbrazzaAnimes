@@ -2,7 +2,7 @@ import api from "../../services/api";
 import { useEffect, useState } from "react";
 import { AxiosResponse } from "axios";
 import { Navbar } from "../../components/Navbar";
-import { Container } from "./styles";
+import { Container, LoadingSection } from "./styles";
 import { ExternalLink } from "react-external-link";
 
 type SingleNews = {
@@ -18,13 +18,21 @@ type SingleNews = {
 
 export function News({match: {params: {id}}}: any) {
   const [news, setNews] = useState<SingleNews[]>([]);
+  const [loading, setLoading] = useState(true)
   useEffect(() => {
     api.get(`/v3/anime/${id}/news`)
     .then((response: AxiosResponse<any>) => {
       setNews(response.data.articles)
+      setLoading(false)
     })
   }, [id])
-
+  if(loading){
+    return(
+      <LoadingSection>
+        <h1>Loading ....</h1>
+      </LoadingSection>
+    )
+  }
   return(
     <div>
       <Navbar></Navbar>
@@ -36,7 +44,7 @@ export function News({match: {params: {id}}}: any) {
               <p>Date: { new Intl.DateTimeFormat("en").format(new Date(content.date))}</p>
               <hr/>
               <div className="info-related">
-                <img src={content.image_url} alt={content.author_url} />
+                <img src={content.image_url} alt={content.author_url} loading="lazy"/>
                 <div className="anime-info">
                   <strong>{content.title}</strong>
                   <p>{content.intro}<ExternalLink href={`${content.url}`}>View more</ExternalLink></p>

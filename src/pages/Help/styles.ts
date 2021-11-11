@@ -8,7 +8,7 @@ export const Container = styled.form`
 
   .content {
     padding: 30px 100px;
-    background: var(--shape);
+    background: var(--box);
     width: 80%;
     max-width: 100%;
     border-radius: 24px;
@@ -22,6 +22,7 @@ export const Container = styled.form`
       label {
         font-size: 18px;
         font-weight: 600;
+        color: var(--shape);
       }
       input {
         width: 100%;

@@ -1,5 +1,15 @@
 import styled from "styled-components";
-
+export const LoadingSection = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  
+  h1 {
+    color: var(--shape);
+    align-self: center;
+  }
+`;
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -13,10 +23,14 @@ export const Container = styled.div`
     max-width: 100%;
     flex-direction: column;
     margin: 30px 0;
-    background: var(--shape);
+    background: var(--box);
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     padding: 10px;
+
+    p {
+      color: var(--shape);
+    }
 
     a:not(.anime-info a) {
       text-decoration: none;
@@ -36,22 +50,24 @@ export const Container = styled.div`
         width: 215px;
         height: 318px;
       }
-      .anime-info{
+      .anime-info {
         margin-left: 30px;
 
-        strong{
+        strong {
           font-size: 24px;
           font-weight: 600;
+          color: var(--shape);
         }
 
-        p{
+        p {
+          color: var(--shape);
           margin-top: 20px;
         }
       }
-      .buttons{
+      .buttons {
         margin-top: 20px;
 
-        a{
+        a {
           padding: 10px 25px;
           color: var(--shape);
           background: var(--green);
@@ -59,26 +75,26 @@ export const Container = styled.div`
           text-decoration: none;
           transition: all 0.3s;
 
-          :hover{
+          :hover {
             filter: brightness(90%);
           }
         }
       }
     }
   }
-  @media (max-width: 767px){
-    .anime-news{
+  @media (max-width: 767px) {
+    .anime-news {
       width: 100%;
     }
-    .info-related{
+    .info-related {
       flex-direction: column;
-      
-      img{
+
+      img {
         margin: 0 auto;
         margin-bottom: 20px;
       }
     }
-    .buttons{
+    .buttons {
       display: flex;
       justify-content: center;
     }

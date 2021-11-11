@@ -16,7 +16,7 @@ export const Container = styled.section`
       border-top-right-radius: 8px;
     }
     .content {
-      background: var(--shape);
+      background: var(--box);
       width: 100%;
       border-bottom-left-radius: 10px;
       border-bottom-right-radius: 10px;
@@ -24,19 +24,27 @@ export const Container = styled.section`
       text-align: center;
 
       .info {
-        background: var(--green);
+        background: var(--box);
+        p{
+          color: var(--shape);
+          padding: 10px 0;
+        }
+        hr{
+          margin-top: 10px;
+        }
       }
       h3 {
+        padding: 10px 0;
         margin-bottom: 10px;
-        color: var(--text);
+        color: var(--shape);
       }
       .buttons {
-        background: var(--blue);
+        background: var(--box);
         padding: 25px;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
 
-        a {
+        .view, .info {
           padding: 10px 15px;
           margin: 10px 5px 0;
           color: var(--shape);
@@ -48,9 +56,6 @@ export const Container = styled.section`
           :hover{
             filter: brightness(85%);
           }
-        }
-        .view {
-          background: var(--red);
         }
       }
     }

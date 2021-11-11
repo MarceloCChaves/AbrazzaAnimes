@@ -19,7 +19,6 @@ export const Container = styled.div`
       a {
         text-decoration: none;
         color: var(--shape);
-        background: var(--green);
         padding: 5px;
         border-radius: 8px;
       }
