@@ -24,8 +24,7 @@ export const Container = styled.div`
     flex-direction: column;
     margin: 30px 0;
     background: var(--box);
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-radius:4px;
     padding: 10px;
 
     p {
@@ -84,7 +83,7 @@ export const Container = styled.div`
   }
   @media (max-width: 767px) {
     .anime-news {
-      width: 100%;
+      width: 90%;
     }
     .info-related {
       flex-direction: column;
@@ -97,6 +96,13 @@ export const Container = styled.div`
     .buttons {
       display: flex;
       justify-content: center;
+
+      a{
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        text-align: center;
+      }
     }
   }
 `;
