@@ -1,7 +1,7 @@
 # 🔗 AbrazzaAnimes
 
 ## 📕 Sobre
-Abrazza animes é um serviço que você pode descobrir quais animes estão em lançamento <br>
+Abrazza animes é uma aplicação para descobrir quais animes estão em lançamento <br>
 
 <div align="center">
   <img width="700px;" src="https://cdn.discordapp.com/attachments/757683099437105278/971577629788491796/unknown.png" />
